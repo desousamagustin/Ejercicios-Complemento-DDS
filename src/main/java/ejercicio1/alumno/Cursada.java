@@ -11,13 +11,13 @@ public class Cursada {
     private Materia materia;
     private Estado strategyEstado;
 
-    public Cursada(Alumno alumno, Materia materia, Estado strategyEstado) {
-        this.alumno = alumno;
-        this.materia = materia;
-        this.strategyEstado = strategyEstado;
-    }
-
     public void generarHojaDeRuta() {
         strategyEstado.generarHojaDeRuta(materia,alumno);
+    }
+
+    public void asignarValores(Alumno alumno,Materia materia,Estado estado) {
+        this.alumno = alumno;
+        this.materia = materia;
+        this.strategyEstado = estado;
     }
 }

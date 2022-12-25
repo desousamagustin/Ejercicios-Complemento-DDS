@@ -13,17 +13,9 @@ import java.util.List;
 import java.util.Scanner;
 
 public class InterfazDeUsuario1 {
-    Alumno alumno;
-    Cursada cursada;
+    Alumno alumno = new Alumno();
+    Cursada cursada = new Cursada();
 
-    public void generarAlumno() {
-        List<Cursada> cursadas = new ArrayList<>();
-        Materia materia = new Materia(1234,"Disenio de sistemas");
-        Estado estadoCursada = new Bien();
-        cursada = new Cursada(alumno,materia,estadoCursada);
-        cursadas.add(cursada);
-        alumno = new Alumno("Agustin","De Sousa Mariano",1714193,cursadas);
-    }
 
     public InterfazDeUsuario1() {
         this.mostrarMenu();
@@ -32,7 +24,7 @@ public class InterfazDeUsuario1 {
     public void mostrarMenu() {
         int opcion;
 
-        this.generarAlumno();
+        alumno.generarAlumno(cursada);
 
         do {
             Scanner scanner = new Scanner(System.in);
